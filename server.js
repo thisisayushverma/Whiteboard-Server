@@ -29,4 +29,4 @@ app.use(express.json({
 app.use('/api/todo/auth',require("./routes/user.routes.js"))
 
 const PORT =process.env.PORT || 3000
-app.listen(PORT,console.log(`YOur app listen in ${PORT}`.red.underline.bold))
+app.listen(PORT,console.log(`YOur app listen hello world in ${PORT}`.red.underline.bold))
