@@ -26,7 +26,7 @@ app.use(express.json({
     extended:true
 }))
 
-app.use('/api/todo/auth',require("./routes/user.routes.js"))
-
+app.use('/api/whiteboard/auth',require("./routes/user.routes.js"))
+app.use('/api/whiteboard',require("./routes/whiteboard.routes"))
 const PORT =process.env.PORT || 3000
 app.listen(PORT,console.log(`YOur app listen hello world in ${PORT}`.red.underline.bold))
