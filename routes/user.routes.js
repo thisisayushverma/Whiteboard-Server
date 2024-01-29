@@ -53,7 +53,8 @@ router.post('/register',async (req,res,next)=>{
             if(err) throw err
             res.status(200).json({
                 success:true,
-                token:token
+                token:token,
+                user:user
             })
         })
 
