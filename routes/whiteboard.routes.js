@@ -29,7 +29,7 @@ router.post('/',auth,async (req,res,next)=>{
 
 router.get('/',auth,async(req,res,next)=>{
     try {
-        const file=await Whiteboard.find({user:req.user.id})
+        const file=await Whiteboard.find({user:req.user.id},{_id:1,name:1})
         if(!file){
             res.status(400).json({
                 success:false,
@@ -104,4 +104,4 @@ router.delete('/:id',async(req,res,next)=>{
     }
 })
 
-module.exports=router
+module.exports=router   
