@@ -15,7 +15,7 @@ const whiteboardSchema= new mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref:User
     }
-},{timeseries:true})
+},{timestamps:true})
 
 
 const Whiteboard = mongoose.model("Whiteboard",whiteboardSchema)

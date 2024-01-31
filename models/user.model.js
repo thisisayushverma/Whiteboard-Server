@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
     avatar:{
         type:String
     }
-},{timeseries:true})
+},{timestamps:true})
 
 const User = mongoose.model("User",userSchema)
 module.exports= User
