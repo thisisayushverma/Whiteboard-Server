@@ -77,6 +77,28 @@ router.put('/:id',async (req,res,next)=>{
     }
 })
 
+
+// getting data of particualr whiteboard from the id
+router.get('/:id',async(req,res,next)=>{
+    try {
+        let file = await Whiteboard.findById(req.params.id);
+        if(!file){
+            res.status(400).json({
+                success:false,
+                msg:"id may not be correct"
+            })
+        }
+        else{
+            res.status(200).json({
+                success:true,
+                msg:"wb is find also sended",
+                file:file
+            })
+        }
+    } catch (error) {
+        console.log(`Error while getting whiteboard${error}`);
+    }
+})
 // route for deleting the whiteboard
 
 router.delete('/:id',async(req,res,next)=>{
