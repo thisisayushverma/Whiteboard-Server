@@ -29,7 +29,8 @@ router.post('/',auth,async (req,res,next)=>{
 
 router.get('/',auth,async(req,res,next)=>{
     try {
-        const file=await Whiteboard.find({user:req.user.id},{_id:1,name:1})
+        const file=await Whiteboard.find({user:req.user.id},{_id:1,name:1}).sort({
+            updatedAt:-1})
         if(!file){
             res.status(400).json({
                 success:false,
