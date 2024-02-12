@@ -8,7 +8,7 @@ const whiteboardSchema= new mongoose.Schema({
         required:true
     },
     path:{
-        type:JSON,
+        type:String,
         required:true
     },
     user:{
